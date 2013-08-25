@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.easycassandra</groupId>
+    <artifactId>samples</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Easy-Cassandra-samples-parent</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <easy.cassandra.version>2.0.0-RC2</easy.cassandra.version>
+    <junit.version>4.8.1</junit.version>
+    <cassandra.driver.core.version>1.0.0</cassandra.driver.core.version>
+  </properties>
+
+	<dependencies>
+
+
+		<!-- Cassandra driver -->
+		<dependency>
+			<groupId>com.datastax.cassandra</groupId>
+			<artifactId>cassandra-driver-core</artifactId>
+			<version>${cassandra.driver.core.version}</version>
+		</dependency>
+
+		<!-- Easy-Cassandra -->
+		<dependency>
+			<groupId>org.easycassandra</groupId>
+			<artifactId>EasyCassandra</artifactId>
+			<version>${easy.cassandra.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	
+	
+<repositories>
+    <repository>
+        <id>easycassandra</id>
+        <url>http://otaviojava.googlecode.com/svn/repository/</url>
+    </repository>
+  </repositories>
+
+<modules>
+    <module>cassandra-spring-hello-world</module>
+</modules>
+
+</project>
+
