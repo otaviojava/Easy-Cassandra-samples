@@ -9,10 +9,22 @@
 
   <name>Easy-Cassandra-samples-parent</name>
   <url>http://maven.apache.org</url>
-
-  <properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <easy.cassandra.version>2.0.0-RC2</easy.cassandra.version>
+    <easy.cassandra.version>2.0.0-RC3</easy.cassandra.version>
     <junit.version>4.8.1</junit.version>
     <cassandra.driver.core.version>1.0.3</cassandra.driver.core.version>
   </properties>
@@ -53,6 +65,7 @@
 
 <modules>
     <module>cassandra-spring-hello-world</module>
+    <module>cassandra-javaee-rest-hello-world</module>
 </modules>
 
 </project>
