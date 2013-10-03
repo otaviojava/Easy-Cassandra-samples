@@ -31,8 +31,10 @@
 
 	</dependencies>
 
+
 <build>
        <plugins>
+       
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -40,11 +42,9 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
-                    <compilerArguments>
-                        <endorseddirs>${endorsed.dir}</endorseddirs>
-                    </compilerArguments>
                 </configuration>
             </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ejb-plugin</artifactId>
@@ -53,6 +53,7 @@
                     <ejbVersion>3.1</ejbVersion>
                 </configuration>
             </plugin>
+            
         </plugins>
     </build>
 	
