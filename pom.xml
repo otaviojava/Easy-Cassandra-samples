@@ -24,9 +24,9 @@
     </build>
     <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <easy.cassandra.version>2.0.0-RC3</easy.cassandra.version>
+    <easy.cassandra.version>2.0.0-RC8</easy.cassandra.version>
     <junit.version>4.8.1</junit.version>
-    <cassandra.driver.core.version>1.0.3</cassandra.driver.core.version>
+    <cassandra.driver.core.version>2.0.0-rc2</cassandra.driver.core.version>
   </properties>
 
 	<dependencies>
