@@ -16,9 +16,9 @@
 		</list>
 	</property>
 </bean>	
-
+<!--
 <bean id="cassandraTemplate" class="org.easycassandra.persistence.cassandra.spring.SimpleCassandraTemplateImpl" >
 	<constructor-arg name="factory" ref="cassandraFactory" />
-</bean>
+</bean>-->
 
 </beans>
