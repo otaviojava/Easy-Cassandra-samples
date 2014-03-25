@@ -1,0 +1,59 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<context:component-scan base-package="org.javabahia.cassandra.spring" />	
+
+<context:property-placeholder location="classpath:music.properties" />
+
+<bean id="musics" class="org.javabahia.cassandra.spring.model.Musics">
+	<property name="musics">
+		<list>
+			<value>${lepo}</value>
+			<value>${blue.shoes}</value>
+			<value>${ai.se.eu.te.pego}</value>
+			<value>${passaro.fogo}</value>
+			<value>${paraiso}</value>
+			<value>${monte.castelo}</value>
+			<value>${trem.azul}</value>
+			<value>${por.voce}</value>
+			<value>${amar.pecado}</value>
+			<value>${yellow.submarine}</value>
+		</list>
+	</property>
+
+</bean>
+
+
+<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean" >
+	<property name="converters">
+		<set>
+			<bean class="org.javabahia.cassandra.spring.model.MusicConverter"/>
+		</set>
+	</property>
+</bean>
+
+<bean id = "clusterInformation" class="org.easycassandra.persistence.cassandra.ClusterInformation">
+	<property name="keySpace" value="javabahia" />
+	<property name="hosts">
+		<list>
+			<value>localhost</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="cassandraFactory" class="org.easycassandra.persistence.cassandra.spring.CassandraFactoryAnnotation">
+	<constructor-arg name="clusterInformation" ref="clusterInformation" />
+	<property name="annotatedClasses">
+		<list>
+			<value>org.javabahia.cassandra.spring.model.Music</value>
+		</list>
+	</property>
+</bean>	
+	
+
+</beans>

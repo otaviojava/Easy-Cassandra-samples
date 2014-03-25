@@ -53,6 +53,13 @@
 			<scope>test</scope>
 		</dependency>
 
+                <dependency>
+                 	<groupId>org.apache.commons</groupId>
+                  	<artifactId>commons-lang3</artifactId>
+                   	<version>3.3</version>
+               </dependency>
+            
+
 	</dependencies>
 	
 	
@@ -64,8 +71,8 @@
   </repositories>
 
 <modules>
-    <module>cassandra-spring-hello-world</module>
     <module>cassandra-javaee-rest-hello-world</module>
+    <module>cassandra-spring</module>
 </modules>
 
 </project>

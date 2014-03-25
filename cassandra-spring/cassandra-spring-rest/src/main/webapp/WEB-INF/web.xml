@@ -1,0 +1,27 @@
+<web-app xmlns:xsi='http:www.w3.org2001XMLSchema-instance'
+	xmlns='http:java.sun.comxmlnsjavaee' xmlns:web='http:java.sun.comxmlnsjavaeeweb-app_2_5.xsd'
+	xsi:schemaLocation='http:java.sun.comxmlnsjavaee 
+  http:java.sun.comxmlnsjavaeeweb-app_3_0.xsd'
+	id='WebApp_ID' version='3.0'>
+
+	<listener>
+		<listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+		</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.jboss.resteasy.plugins.spring.SpringContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Resteasy</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Resteasy</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+</web-app>
