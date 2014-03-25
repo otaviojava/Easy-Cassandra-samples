@@ -73,6 +73,7 @@
 <modules>
     <module>cassandra-javaee-rest-hello-world</module>
     <module>cassandra-spring</module>
+    <module>cassandra-hello-world</module>
 </modules>
 
 </project>

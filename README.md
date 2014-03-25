@@ -3,6 +3,7 @@ Easy-Cassandra-samples
 
 Samples to Easy-Cassandra
 
+cassandra-hello-world: example just using Easy-Cassandra (neither Spring or Java EE).
 
 cassandra-spring-hello-world - example using cassandra with Spring-data with Cassandra on Java SE
 
